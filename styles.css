@@ -1,0 +1,170 @@
+/* styles.css */
+body {
+    background-color: #e8e8e4; /* Beige doux pour l'arrière-plan */
+    color: #333; /* Texte sombre pour le contraste */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6b705c !important; /* Vert olive pour un look vintage */
+}
+
+.navbar-brand, .nav-link {
+    color: #f8f8f8 !important; /* Couleur claire pour ressortir */
+}
+
+.navbar-toggler {
+    background-color: #f8f8f8; /* Couleur du bouton burger pour être visible sur le fond sombre */
+}
+.logo-container {
+    width: 50px; /* Ajustez la taille du cercle */
+    height: 50px; /* Ajustez la taille du cercle */
+    border-radius: 50%; /* Pour créer un cercle */
+    overflow: hidden; /* Pour masquer les parties de l'image qui débordent */
+    background-color: white; /* Couleur de fond du cercle (ajustez si nécessaire) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100%; /* S'assure que l'image remplit le cercle */
+    height: auto; /* Conserve le ratio de l'image */
+  }
+  
+.btn-secondary, .btn-primary {
+    background-color: #6b705c; /* Vert olive doux pour un look vintage */
+    border: none;
+    color: #f8f8f8;
+}
+
+#toggleFilters {
+    background-color: #6b705c;
+    color: #f8f8f8;
+    border: none;
+}
+
+.btn-outline-secondary {
+    color: #6b705c; /* Texte vert olive */
+    border-color: #6b705c;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6b705c;
+    color: #f8f8f8;
+}
+.active{
+    background-color: #6b705c;
+
+}
+.map-container {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #a8a8a8;
+    margin-bottom: 20px;
+    background-color: #d3d3d3; /* Gris doux pour l'arrière-plan de la carte */
+}
+
+.footer {
+    background-color: #f0efeb; /* Beige clair pour le fond du pied de page */
+    color: #333;
+}
+
+.footer a {
+    color: #6b705c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    border: 1px solid #a8a8a8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #faf3e0; /* Fond vintage beige */
+    color: #333;
+}
+
+.star {
+    font-size: 1.2em;
+    color: #a8a8a8;
+}
+
+.star.filled {
+    color: #d4a373; /* Or vieilli pour les étoiles remplies */
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #faf3e0; /* Fond beige doux pour le popup */
+    color: #333;
+    padding: 20px;
+    border: 1px solid #a8a8a8;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.popup-content {
+    padding: 10px;
+}
+
+.popup-container .btn {
+    background-color: #6b705c;
+    color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.boutique-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #a8a8a8;
+}
+
+/* Style pour les boutons du formulaire de recherche */
+.form-control {
+    border: 1px solid #a8a8a8;
+    background-color: #faf3e0;
+    color: #333;
+}
+
+.form-control::placeholder {
+    color: #6b705c;
+}
+
+.hidden {
+    display: none;
+}
+.filter_btn{
+    cursor: pointer;
+}
+.esri-icon {
+    font-size: 1.2em; /* Ajustez la taille ici */
+    color: #333; /* Couleur personnalisée si nécessaire */
+}
+.esri-widget--button {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.esri-icon {
+    font-size: 1.2em; /* Ajustez la taille ici */
+    color: #333; /* Couleur personnalisée si nécessaire */
+}
+.esri-widget--button {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+}

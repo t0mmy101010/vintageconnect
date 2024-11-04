@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Shops Guide in London</title>
+    <link rel="stylesheet" href="g_styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="g_app.js" defer></script>
+    <style>
+        /* Custom Color Palette */
+        :root {
+            --primary-color: #6b705c; /* olive green */
+            --secondary-color: #cb997e; /* warm beige */
+            --accent-color: #b7b7a4; /* light gray-green */
+            --text-color: #404034; /* dark gray */
+            --background-color: #f4f1de; /* light cream */
+        }
+        
+        /* Navbar styling */
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        .navbar-brand, .nav-link, .form-control, .btn-secondary {
+            color: var(--text-color) !important;
+        }
+        .btn-secondary {
+            background-color: var(--secondary-color) !important;
+            border-color: var(--secondary-color) !important;
+        }
+
+        /* Button Styling */
+        .btn-outline-secondary {
+            color: var(--text-color) !important;
+            border-color: var(--secondary-color) !important;
+        }
+        .btn-outline-secondary:hover {
+            background-color: var(--secondary-color) !important;
+            color: white !important;
+        }
+
+        /* Main Content */
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        /* Map and Controls */
+        #map {
+            height: 500px;
+            width: 100%;
+            margin: 20px 0;
+            border: 2px solid var(--primary-color);
+        }
+        #controls {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        #controls button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        #controls button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Info Section */
+        #info {
+            padding: 20px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border-radius: 8px;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        /* Hide text labels on the map */
+        .leaflet-tile-container .leaflet-tile img {
+            filter: grayscale(100%) contrast(100%) brightness(0.8); /* Adjust tile appearance */
+        }
+
+        /* Add a white overlay to hide specific elements if needed */
+        #map::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+            pointer-events: none; /* Allows interaction with the map below */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand d-flex align-items-center">
+                <div class="logo-container">
+                    <img src="../login/3.jpg" alt="Logo" class="logo">
+                </div>
+                <a class="navbar-brand ms-2" href="#">Vintage Connect</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./e_index.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./r_index.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./g_index.html">Vintage Tour Guide</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <h1>Vintage Shops Guide in London</h1>
+    <div id="map"></div>
+
+    <div id="controls">
+        <button id="previous">Previous Shop</button>
+        <button id="next">Next Shop</button>
+    </div>
+
+    <div id="info">
+        <!-- Vintage shop information will appear here -->
+        <p>Welcome to our guide to vintage shops in London. Use the buttons above to navigate between different shops.</p>
+    </div>
+    <footer class="footer mt-4 bg-light text-center">
+      <p>Follow us on social media!</p>
+      <a href="#">Instagram</a> | <a href="#">Facebook</a>
+      <p><small>© 2024 Vintage Connect - Privacy Policy</small></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Couleur de la barre de navigation */
+.navbar {
+    background-color: #6b705c !important; /* Bleu vif */
+}
+
+/* Couleur du texte et des liens dans la barre de navigation */
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Blanc pour ressortir sur le bleu */
+}
+
+/* Bouton de recherche et input */
+.form-control {
+    background-color: #343a40; /* Gris foncé */
+    color: #f8f8f8;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gris neutre pour le bouton */
+    color: #ffffff;
+}
+
+/* Style pour les liens actifs et survolés */
+.nav-link.active, .nav-link:hover {
+    color: #c0c0c0 !important; /* Gris clair pour le survol */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#map {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    border: 2px solid #333;
+}
+
+#controls {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#info {
+    margin-top: 20px;
+}
+/* styles.css */
+body {
+    background-color: #e8e8e4; /* Beige doux pour l'arrière-plan */
+    color: #333; /* Texte sombre pour le contraste */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6b705c !important; /* Vert olive pour un look vintage */
+}
+
+.navbar-brand, .nav-link {
+    color: #f8f8f8 !important; /* Couleur claire pour ressortir */
+}
+
+.navbar-toggler {
+    background-color: #f8f8f8; /* Couleur du bouton burger pour être visible sur le fond sombre */
+}
+.logo-container {
+    width: 50px; /* Ajustez la taille du cercle */
+    height: 50px; /* Ajustez la taille du cercle */
+    border-radius: 50%; /* Pour créer un cercle */
+    overflow: hidden; /* Pour masquer les parties de l'image qui débordent */
+    background-color: white; /* Couleur de fond du cercle (ajustez si nécessaire) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100%; /* S'assure que l'image remplit le cercle */
+    height: auto; /* Conserve le ratio de l'image */
+  }
+  
+.btn-secondary, .btn-primary {
+    background-color: #6b705c; /* Vert olive doux pour un look vintage */
+    border: none;
+    color: #f8f8f8;
+}
+
+#toggleFilters {
+    background-color: #6b705c;
+    color: #f8f8f8;
+    border: none;
+}
+
+.btn-outline-secondary {
+    color: #6b705c; /* Texte vert olive */
+    border-color: #6b705c;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6b705c;
+    color: #f8f8f8;
+}
+.active{
+    background-color: #6b705c;
+
+}
+.map-container {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #a8a8a8;
+    margin-bottom: 20px;
+    background-color: #d3d3d3; /* Gris doux pour l'arrière-plan de la carte */
+}
+
+.footer {
+    background-color: #f0efeb; /* Beige clair pour le fond du pied de page */
+    color: #333;
+}
+
+.footer a {
+    color: #6b705c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

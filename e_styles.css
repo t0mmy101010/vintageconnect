@@ -1,0 +1,18 @@
+/* styles.css */
+body {
+    background-color: #e8e8e4; /* Beige doux pour l'arrière-plan */
+    color: #333; /* Texte sombre pour le contraste */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6b705c !important; /* Vert olive pour un look vintage */
+}
+
+.navbar-brand, .nav-link {
+    color: #f8f8f8 !important; /* Couleur claire pour ressortir */
+}
+
+.navbar-toggler {
+    background-color: #f8f8f8; /* Couleur du bouton burger pour être visible sur le fond sombre */
+}

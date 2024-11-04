@@ -1,0 +1,93 @@
+/* Styles généraux */
+body {
+    background-color: #d3d3d3; /* Fond gris clair pour un style vintage */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px; /* Ajout d'une marge supérieure */
+}
+
+/* Style du formulaire */
+form {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Titres et sous-titres */
+h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+p {
+    color: #666;
+}
+
+/* Labels et texte */
+label {
+    color: #333;
+}
+
+.form-control, .form-select {
+    background-color: #e8e8e8; /* Couleur des champs */
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    color: #333;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #a8a8a8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton de soumission */
+.btn-primary {
+    background-color: #333; /* Couleur noire */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #555;
+}
+
+/* Radio buttons et autres éléments */
+.form-check-label, .form-check-input {
+    color: #555;
+}
+
+.form-check-input:checked {
+    background-color: #333;
+    border-color: #333;
+}
+/* styles.css */
+body {
+    background-color: #e8e8e4; /* Beige doux pour l'arrière-plan */
+    color: #333; /* Texte sombre pour le contraste */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #6b705c !important; /* Vert olive pour un look vintage */
+}
+
+.navbar-brand, .nav-link {
+    color: #f8f8f8 !important; /* Couleur claire pour ressortir */
+}
+
+.navbar-toggler {
+    background-color: #f8f8f8; /* Couleur du bouton burger pour être visible sur le fond sombre */
+}
